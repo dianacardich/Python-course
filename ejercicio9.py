@@ -1,10 +1,26 @@
-# Realizar un programa que compruebe si una cadena contiene una subcadena.
-#las dos cadenas se introducen por teclado.
+# algoritmo que pida tres numeros y los muestre ordenador de mayor a menor.
 
-cad = input("Introduce una cadena:")
-subcad = input("Intriduce una subcadena:")
+num1 = int(input("Introduce el primer numero:"))
+num2 = int(input("Introduce el segundo numero:"))
+num3 = int(input("Introduce el tercer numero:"))
 
-if cad.find(subcad) > -1:
-    print("La cadena contiene una subcadena.")
-else:
-    print("La cadena NO contien la subcadena.")
+if num1>num2 and num1>num3:
+    if num2>num3:
+        print(num1,num2,num3)
+    else:
+        print(num1,num2,num3)
+if num2>num1 and num2>num3:
+    if num1>num3:
+        print(num2,num1,num3)
+    else:
+        print(num2,num3,num1)
+if num3>num1 and num3>num2:
+    if num1>num2:
+        print(num3,num1,num2)
+    else:
+        print(num3,num2,num1)
+
+#averiguar si esto se puede hacer con alternativa muliple "elif"
+
+
+

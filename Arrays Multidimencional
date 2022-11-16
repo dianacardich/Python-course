@@ -1,0 +1,18 @@
+lat = 34.5
+long = 45.6
+posicion = [lat, long]
+
+historial = [
+    [34.5, 45.6, "2022/02/02 17:20:24"],
+    [34.5, 46.3, "2022/02/02 17:20:28"],
+    [25.5, 47.3, "2022/02/02 17:21:24"],
+    [33.5, 49.5, "2022/02/02 17:20:24"],
+]
+
+indiceLongitud = 0
+indiceLatitud = 1
+indiceFecha = 2
+
+
+for coordenada in historial:   # sirve para recorrer el array (muestra todos los datos del array
+    print(coordenada[indiceFecha])

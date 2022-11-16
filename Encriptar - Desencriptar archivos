@@ -1,0 +1,28 @@
+#projecto para encriptar o desencriptar tarjetas de credito:
+
+#archivo = open('texto.txt', 'a')
+#archivo.write('Prueba de guardado en el archivo')
+#archivo.close()
+
+
+#archivo = open('texto.txt', 'r')
+#print(archivo.read())
+
+def encriptar(texto):
+    textoFinal = ''
+    for letra in texto:
+        textoFinal += letra + 'x'
+    print('Texto encriptado: ' + textoFinal)
+
+def desencriptar(texto):
+    print('El texto a desencriptar es: ' + texto)
+    textoFinal = ''
+    contador = 0
+    for letra in texto:
+        if contador % 2 == 0:
+            textoFinal += letra
+        contador += 1
+    print('texto desencripado: ' + textoFinal)
+
+
+desencriptar('Pxrxuxexbxax xdxex xtxexxxtxox')

@@ -1,4 +1,4 @@
-#projecto para encriptar o desencriptar tarjetas de credito:
+#encriptar o desencriptar tarjetas de credito:
 
 #archivo = open('texto.txt', 'a')
 #archivo.write('Prueba de guardado en el archivo')
@@ -7,30 +7,26 @@
 
 #archivo = open('texto.txt', 'r')
 #print(archivo.read())
-
 def encriptar(texto):
     textoFinal = ''
     for letra in texto:
-        textoFinal += letra + 'x'
-    print('Texto encriptado: ' + textoFinal)
+        ascii = ord(letra)
+        ascii += 1
+        textoFinal += chr(ascii)
+    return textoFinal
 
 def desencriptar(texto):
     print('El texto a desencriptar es: ' + texto)
     textoFinal = ''
-    contador = 0
     for letra in texto:
-        if contador % 2 == 0:
-            textoFinal += letra
-        contador += 1
-    print('texto desencripado: ' + textoFinal)
-
+        ascii = ord(letra)
+        ascii -= 1
+        textoFinal += chr(ascii)
+    return textoFinal
 
 desencriptar('Pxrxuxexbxax xdxex xtxexxxtxox')
 
 
-
-
-#encriptar un archivo.txt ----------
 
 
 def encriptarArchivo(rutaArchivo):
@@ -54,7 +50,7 @@ def desencriptarArchivo(rutaArchivo):
     archivo = open(rutaArchivo, 'w')
     archivo.write(textoDesEncriptado)
     archivo.close()
-    print('El archivo se desencripto correctamente')
+    print('El archivo se encripto correctamente')
 
 respuestaEoD = input('Presione  "E" para encriptar, o "D" para desencriptar')
 rutaArchivo = input('Ingrese la ruta del archivo')

@@ -35,9 +35,23 @@ print("La suma de los primeros enteros desde 1 hasta " + str(n) + " es " + str(s
 #  y lo almacene en una variable, y muestre por pantalla la frase Tu índice de masa corporal es <imc> donde <imc> es el índice
 #  de masa corporal calculado redondeado con dos decimales.
 
-
-
 peso = float(input("Ingrese su peso en kg: "))
 estatura = float(input("Ingrese su estatura en metros: "))
 imc = round((peso/estatura)**2,2)
 print("Tu índice de masa corporal es " + str(imc))
+
+#8 Escribir un programa que pida al usuario dos números enteros y muestre por pantalla la <n> entre <m> da un cociente <c>
+#  y un resto <r> donde <n> y <m> son los números introducidos por el usuario, y <c> y <r> son el cociente y el resto de
+#  la división entera respectivamente.
+
+n = int(input("Ingrese un numero entero: "))
+m = int(input("Ingrese un segundo numero entero: "))
+c = (n // m)
+r = (n % m)
+print("El número", n , "entre", m , "da un cociente" , c , "y un resto", r)
+
+# Otra forma de solucion
+n = input("Introduce el dividendo(entero): ")
+m = input("Introduce el divisor (entero): ")
+print ( n + "entre" + m + "da un cociente " + str(int(n) // int(m)) + " y un resto " + str(int(n) % int(m)))
+

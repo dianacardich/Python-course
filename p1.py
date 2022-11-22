@@ -6,6 +6,7 @@ interesAnual = float(input("Ingrese el interes anual: (%)"))
 numAños = int(input("Ingrese el número de años: "))
 print("Capital final :  " + str(round(invertir * (interesAnual / 100 + 1) ** numAños, 2)))
 
+
 #ejercicio 10juguetería tiene mucho éxito en dos de sus productos: payasos y muñecas. Suele hacer venta por correo 
 # y la empresa de logística les cobra por peso de cada paquete así que deben calcular el peso de los payasos 
 # y muñecas que saldrán en cada paquete a demanda. Cada payaso pesa 112 g y cada muñeca 75 g. Escribir un programa

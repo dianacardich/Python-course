@@ -1,3 +1,4 @@
+"""
 # 9 Escribir un programa que pregunte al usuario una cantidad a invertir, el interés anual y el número de años, y muestre
 # por pantalla el capital obtenido en la inversión.
 
@@ -48,10 +49,30 @@ print("El coste de una barra fresca es:" + str(precioPan) + "€")
 print("El descuento que se le hace por no ser fresca es:" + str(descuento * 100) + "%")
 print("El coste final es:" + str(round(costeTotal, 2))+ "€")
 
+#Ejercicios de cadenas 01: Escribir un programa que pregunte el nombre del usuario en la consola
+#y un número entero e imprima por pantalla en líneas distintas el nombre del usuario tantas veces como el número introducido.
 
+nombre = input("Cual es tu nombre?: ")
+numEnt = int(input("Introduce un numero entero: "))
+print((nombre + "\n") * numEnt)
 
+#2 Escribir un programa que pregunte el nombre completo del usuario en la consola y después muestre por pantalla el nombre completo 
+#del usuario tres veces, una con todas las letras minúsculas, otra con todas las letras mayúsculas y otra solo con la primera letra 
+#del nombre y de los apellidos en mayúscula. El usuario puede introducir su nombre combinando mayúsculas y minúsculas como quiera.
+import string
 
+nombre= input("introduce tu nombre completo: ")
+print(nombre.lower())
+print(nombre.upper())
+print(string.capwords(nombre)) # esto hace lo mismo sin tener que declarar "import string" print(nombre.title())
+"""
+ #3 Escribir un programa que pregunte el nombre del usuario en la consola y después de que el usuario lo introduzca muestre por
+# pantalla <NOMBRE> tiene <n> letras, donde <NOMBRE> es el nombre de usuario en mayúsculas y <n> es el número de letras que tienen
+#el nombre.
 
+nombre = input("¿Cual es tu nombre: ")
+print (len(nombre))
+print(nombre.upper())
 
 
 

@@ -65,7 +65,7 @@ nombre= input("introduce tu nombre completo: ")
 print(nombre.lower())
 print(nombre.upper())
 print(string.capwords(nombre)) # esto hace lo mismo sin tener que declarar "import string" print(nombre.title())
-"""
+
  #3 Escribir un programa que pregunte el nombre del usuario en la consola y después de que el usuario lo introduzca muestre por
 # pantalla <NOMBRE> tiene <n> letras, donde <NOMBRE> es el nombre de usuario en mayúsculas y <n> es el número de letras que tienen
 #el nombre.
@@ -73,6 +73,49 @@ print(string.capwords(nombre)) # esto hace lo mismo sin tener que declarar "impo
 nombre = input("¿Cual es tu nombre: ")
 print (len(nombre))
 print(nombre.upper())
+
+#4 Los teléfonos de una empresa tienen el siguiente formato prefijo-número-extension donde el prefijo es el código del país +34, y la
+#extensión tiene dos dígitos (por ejemplo +34-913724710-56). Escribir un programa que pregunte por un número de teléfono con este formato 
+#y muestre por pantalla el número de teléfono sin el prefijo y la extensión.
+
+telf= input("introduce numero de telefono con formato +xx-xxxxxxxxx-xx: ")
+print('El numero de telefono es ', telf[4:-3]) #quita 4 posiciones de delante empezando desde cero y siempre quitamos 1. 3posiciones menos desde el final.
+
+#5 Escribir un programa que pida al usuario que introduzca una frase en la consola y muestre por pantalla la frase invertida.
+frase = input("Introduce una frase: ")
+print(frase[::-1])
+#6 Escribir un programa que pida al usuario que introduzca una frase en la consola y una vocal, despues muestre por pantalla
+# la misma frase pero con la vocal introducida en mayuscula
+frase = input("Introduce una frase: ")
+vocal = input("introduce una vocal en minuscula: ")
+print(frase.replace(vocal, vocal.upper()))
+
+#7 escribir un programa que pregunte el email del usuario en la consola y muestre por pantalla otro correo eletronico con el
+#mismo nombre (la parte de la @) pero con dominio ceu.es.
+email =input ("Introduce tu email: ")
+print (email[:email.find('@')] + '@ceu.es') # imprime la variable email hasta encontrar (find) el @ (ojito menos una posicion regla explicita), y concatena con @ceu.es
+#devuelveme "hasta encontrar  @, por eso [:] esta al inicio.
+"""
+#8 escribir un programa que pregunte por consola el precio de un producto en euros con dos decimales y muestre por
+#pantalla el numero de euros y el numero de centimos del precio introducido.
+precio =input("introduce el precio del producto con dos decimales:  ")
+print(precio[:precio.find('.')], 'euros y', precio[precio.find('.')+1:], 'céntimos.')
+
+#9 escribir un programa que pregunte al usuario la fecha de su nacimiento en formato dd/mm/aaaa y muestra , el dia, el mes y el año.
+#Adaptar el programa anterior para que tambien funcione cuando el dia el mes se introduzcan con un solo caracter.
+
+fecha = input("Introduce la fecha de tu nacimiento en este formato dd/mm/aaaa: ")
+dia = fecha[:fecha.find('/')]
+mesaño = fecha[fecha.find('/')+1:]
+mes = mesaño[:mesaño.find('/')]
+año = mesaño[mesaño.find('/')+1:]
+print('dia', dia)
+print('mes', mes)
+print('año', año)
+
+
+
+
 
 
 

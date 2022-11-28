@@ -95,7 +95,7 @@ print(frase.replace(vocal, vocal.upper()))
 email =input ("Introduce tu email: ")
 print (email[:email.find('@')] + '@ceu.es') # imprime la variable email hasta encontrar (find) el @ (ojito menos una posicion regla explicita), y concatena con @ceu.es
 #devuelveme "hasta encontrar  @, por eso [:] esta al inicio.
-"""
+
 #8 escribir un programa que pregunte por consola el precio de un producto en euros con dos decimales y muestre por
 #pantalla el numero de euros y el numero de centimos del precio introducido.
 precio =input("introduce el precio del producto con dos decimales:  ")
@@ -113,11 +113,22 @@ print('dia', dia)
 print('mes', mes)
 print('año', año)
 
+#10 escribir un programa que pregunte por consola por los productos de una cesta de la compra, separados por comas,
+# y que muestre por pantalla c/u de los productos en línea distinta.
 
+productos = input("Introduce los productos de tu cesta separados por comas: ")
+print(productos.replace(',', '\n')) # reemplaza las comas y la n es salto de linea
 
-
-
-
-
-
+#solucion 2:
+productos = input("Introduce los productos: ")
+print('\n'.join(productos.split(','))) #split quita las comas
+"""
+#11 escribir un programa que pregunte el nombre de un producto, su precio y un numero de unidades y muestre por pantalla 
+#una cadena con el nombre del producto seguido de su precio unitario con 6 digitos enteros y 2 decimals, el numero de unidades 
+# con tres digitos y el coste total con 8 digitos enteros y 2 decimales.
+#revisar esta solucion porque no me convence de la pagina web.
+producto = input('Introduce el nombre del producto: ')
+precio = float(input('Introducde el precio unitario: '))
+unidades = int(input('Introduce el número de unidades: '))
+print('{producto}: {unidades:3d} unidades x {precio:9.2f}€ = {total:11.2f}€'.format(producto = producto, unidades = unidades, precio = precio, total = unidades * precio))
 

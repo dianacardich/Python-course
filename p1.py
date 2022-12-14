@@ -12,5 +12,11 @@ print("Capital final :  " + str(round(invertir * (interesAnual / 100 + 1) ** num
 #  que lea el número de payasos y muñecas vendidos en el último pedido y calcule el peso total del paquete que será
 #  enviado.
 
-payasos = int(input("ingrese numero de payasos comprados :"))
+payasos = int(input("ingrese numero de payasos comprados: "))
 muñecas = int(input("ingrese cantidad de muñecas compradas: "))
+
+pesoPayaso = payasos * 112
+pesoMuñeca = muñecas * 0.75
+pesoTotal = pesoPayaso + pesoMuñeca
+
+print = ("Los payason vendidos son", payasos, " y las muñecas vendidas son", muñecas, "y el peso total es", pesoTotal)
